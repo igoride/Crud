@@ -1,7 +1,7 @@
 package com.example.crud.service.impl;
 
 import com.example.crud.dto.ItemDTO;
-import com.example.crud.model.Item;
+import com.example.crud.Entity.Item;
 import com.example.crud.repository.ItemRepository;
 import com.example.crud.service.ItemService;
 import lombok.RequiredArgsConstructor;

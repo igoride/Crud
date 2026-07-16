@@ -1,7 +1,7 @@
 package com.example.crud.service;
 
 import com.example.crud.dto.ItemDTO;
-import com.example.crud.model.Item;
+import com.example.crud.Entity.Item;
 
 import java.util.List;
 
