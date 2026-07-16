@@ -1,9 +1,10 @@
 package com.example.crud.controller;
 
 import com.example.crud.Entity.User;
-import com.example.crud.dto.LoginDTO;
-import com.example.crud.dto.LoginResponseDTO;
+import com.example.crud.dto.auth.LoginDTO;
+import com.example.crud.dto.auth.LoginResponseDTO;
 import com.example.crud.service.AuthService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,12 +19,12 @@ public class AuthController {
     private final AuthService service;
 
     @PostMapping("/cadastro")
-    public User cadastro(@RequestBody LoginDTO loginDTO) {
+    public User cadastro(@Valid @RequestBody LoginDTO loginDTO) {
         return service.cadastro(loginDTO);
     }
 
     @PostMapping("/login")
-    public LoginResponseDTO login(@RequestBody LoginDTO loginDTO) {
+    public LoginResponseDTO login(@Valid @RequestBody LoginDTO loginDTO) {
         return service.login(loginDTO);
     }
 

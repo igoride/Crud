@@ -1,8 +1,8 @@
 package com.example.crud.service;
 
 import com.example.crud.Entity.User;
-import com.example.crud.dto.LoginDTO;
-import com.example.crud.dto.LoginResponseDTO;
+import com.example.crud.dto.auth.LoginDTO;
+import com.example.crud.dto.auth.LoginResponseDTO;
 
 public interface AuthService {
 

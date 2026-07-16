@@ -3,6 +3,7 @@ package com.example.crud.controller;
 import com.example.crud.dto.ItemDTO;
 import com.example.crud.Entity.Item;
 import com.example.crud.service.ItemService;
+import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
@@ -26,12 +27,12 @@ public class ItemController {
     }
 
     @PostMapping
-    public Item criar(@RequestBody ItemDTO item) {
+    public Item criar(@RequestBody @Valid ItemDTO item) {
         return service.criar(item);
     }
 
     @PutMapping("/{id}")
-    public Item atualizar(@PathVariable Long id, @RequestBody ItemDTO novoItem) {
+    public Item atualizar(@PathVariable Long id, @Valid @RequestBody ItemDTO novoItem) {
         return service.atualizar(id, novoItem);
     }
 

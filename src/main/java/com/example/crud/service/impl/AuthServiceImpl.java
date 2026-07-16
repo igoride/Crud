@@ -1,8 +1,9 @@
 package com.example.crud.service.impl;
 
 import com.example.crud.Entity.User;
-import com.example.crud.dto.LoginDTO;
-import com.example.crud.dto.LoginResponseDTO;
+import com.example.crud.dto.auth.LoginDTO;
+import com.example.crud.dto.auth.LoginResponseDTO;
+import com.example.crud.exception.ConflictException;
 import com.example.crud.repository.UserRepository;
 import com.example.crud.security.JwtService;
 import com.example.crud.service.AuthService;
@@ -24,6 +25,9 @@ public class AuthServiceImpl implements AuthService {
 
     @Override
     public User cadastro(LoginDTO loginDTO) {
+        if (userRepository.findByUsername(loginDTO.getUsername()).isPresent()) {
+            throw new ConflictException("Username já existe: " + loginDTO.getUsername());
+        }
         User user = new User();
         user.setUsername(loginDTO.getUsername());
         user.setPassword(passwordEncoder.encode(loginDTO.getPassword()));
