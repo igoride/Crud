@@ -40,10 +40,14 @@ Como rodar o projeto
 
 ### Estrutura do Projeto
 src/main/java/com/exemplo/crud
+```text
 |--- configuration/ #Configurações de segurança e do Swagger
 |--- controller/    # Controllers Rest
 |--- dto/           # Objetos de transferências de dados
+   |--- auth/
+   |--- exception/
 |--- entity/        # Entidades JPA
+|--- exception/     # Tratamento de exceções
 |--- repository/    # Interfaces JpaRepository
 |--- security/      # JWT e filtros
 |--- service/       # Interfaces e implementações de regras de negócio
