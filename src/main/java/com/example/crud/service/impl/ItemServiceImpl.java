@@ -6,6 +6,8 @@ import com.example.crud.exception.NotFoundException;
 import com.example.crud.repository.ItemRepository;
 import com.example.crud.service.ItemService;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -17,8 +19,8 @@ public class ItemServiceImpl implements ItemService {
     private final ItemRepository repository;
 
     @Override
-    public List<Item> listar(){
-        return repository.findAll();
+    public Page<Item> listar(Pageable pageable){
+        return repository.findAll(pageable);
     }
 
     @Override
