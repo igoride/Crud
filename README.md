@@ -18,13 +18,14 @@ Tecnologias e dependências
 
 Como rodar o projeto
 
-### Pré-requisitos
+### Opção 1
+
+#### Pré-requisitos
 * JDK 25 ou superior instalado.
 * Maven instalado.
 * No application.properties coloque api.security.token.secret=(sua chave secreta).
 
-### Passos para Execução
-
+#### Passos para Execução
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/igoride/Crud.git
@@ -38,6 +39,25 @@ Como rodar o projeto
 4. **Acessar a documentação/API**
    http://localhost:8080/swagger-ui/index.html
 
+### Opção 2
+
+#### Pré-requisitos
+* Docker instalado
+  
+#### Passos para Execução
+1. **Clone o repositório:**
+   ```bash
+   git clone https://github.com/igoride/Crud.git
+   cd crud
+2. **Builde a imagem**
+   ```bash
+   docker build -t crud-itens .
+3. **Execute o container**
+   ```bash
+   docker run -d -p 8080:8080 --name crud-container crud-itens
+4. **Acessar a documentação/API**
+   http://localhost:8080/swagger-ui/index.html
+   
 ### Estrutura do Projeto
 src/main/java/com/exemplo/crud
 ```text
