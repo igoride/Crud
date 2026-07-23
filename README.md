@@ -49,15 +49,15 @@ Como rodar o projeto
    ```bash
    git clone https://github.com/igoride/Crud.git
    cd crud
-2. **Builde a imagem**
+2. **Execute a aplicação com o Docker Compose**
    ```bash
-   docker build -t crud-itens .
-3. **Execute o container**
-   ```bash
-   docker run -d -p 8080:8080 --name crud-container crud-itens
-4. **Acessar a documentação/API**
+   docker compose up --build -d
+3. **Acessar a documentação/API**
    http://localhost:8080/swagger-ui/index.html
-   
+4. **Para parar a aplicação**
+   ```bash
+   docker compose down
+ 
 ### Estrutura do Projeto
 src/main/java/com/exemplo/crud
 ```text
