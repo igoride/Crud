@@ -1,6 +1,6 @@
 package com.example.crud.service.impl;
 
-import com.example.crud.Entity.User;
+import com.example.crud.entity.User;
 import com.example.crud.dto.auth.LoginDTO;
 import com.example.crud.dto.auth.LoginResponseDTO;
 import com.example.crud.exception.ConflictException;
