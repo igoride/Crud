@@ -1,6 +1,6 @@
 package com.example.crud;
 
-import com.example.crud.Entity.Item;
+import com.example.crud.entity.Item;
 import com.example.crud.exception.NotFoundException;
 import com.example.crud.repository.ItemRepository;
 import com.example.crud.service.impl.ItemServiceImpl;

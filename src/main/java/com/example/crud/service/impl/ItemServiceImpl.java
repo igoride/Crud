@@ -1,7 +1,7 @@
 package com.example.crud.service.impl;
 
 import com.example.crud.dto.ItemDTO;
-import com.example.crud.Entity.Item;
+import com.example.crud.entity.Item;
 import com.example.crud.exception.NotFoundException;
 import com.example.crud.repository.ItemRepository;
 import com.example.crud.service.ItemService;
@@ -9,8 +9,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-
-import java.util.List;
 
 @Service
 @RequiredArgsConstructor
