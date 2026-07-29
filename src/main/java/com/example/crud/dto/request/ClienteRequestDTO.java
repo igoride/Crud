@@ -4,5 +4,6 @@ public record ClienteRequestDTO(
 
         String nome,
         String telefone,
-        String cpf
+        String cpf,
+        String email
 ){}

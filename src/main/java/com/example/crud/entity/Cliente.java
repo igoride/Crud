@@ -15,14 +15,17 @@ import lombok.Setter;
 @Table(name = "clientes")
 public class Cliente extends BaseEntity{
 
+    @Column(nullable = false)
     private String nome;
 
     private String telefone;
 
+    @Column(nullable = false)
     private String cpf;
 
     private String email;
 
+    @Column(nullable = false)
     @Enumerated(EnumType.STRING)
     private TipoPessoa tipoPessoa;
 
