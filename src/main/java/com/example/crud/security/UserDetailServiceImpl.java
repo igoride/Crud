@@ -1,6 +1,6 @@
 package com.example.crud.security;
 
-import com.example.crud.repository.UserRepository;
+import com.example.crud.user.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
@@ -19,7 +19,7 @@ public class UserDetailServiceImpl implements UserDetailsService {
         return org.springframework.security.core.userdetails.User.builder()
                 .username(user.getUsername())
                 .password(user.getPassword())
-                .roles(user.getRole())
+                .roles(String.valueOf(user.getRole()))
                 .build();
     }
 

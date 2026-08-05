@@ -1,9 +1,9 @@
 package com.example.crud;
 
-import com.example.crud.entity.Item;
+import com.example.crud.produto.Item;
 import com.example.crud.exception.NotFoundException;
-import com.example.crud.repository.ItemRepository;
-import com.example.crud.service.impl.ItemServiceImpl;
+import com.example.crud.produto.ItemRepository;
+import com.example.crud.produto.ItemServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.InjectMocks;

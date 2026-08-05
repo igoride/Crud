@@ -1,6 +1,6 @@
 package com.example.crud.exception;
 
-import com.example.crud.dto.exception.ExceptionDTO;
+import com.example.crud.exception.dto.ExceptionDTO;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
