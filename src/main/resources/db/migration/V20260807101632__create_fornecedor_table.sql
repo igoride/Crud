@@ -1,8 +1,8 @@
--- Migration: create clientes table
--- Created at Tue Jul 28 22:08:46     2026
+-- Migration: create_fornecedor_table
+-- Created at Fri Aug  7 10:16:32     2026
 
 CREATE TABLE clientes(
--- BaseEntity
+    -- BaseEntity
     id BIGSERIAL PRIMARY KEY,
     uuid UUID NOT NULL,
     ativo BOOLEAN NOT NULL,

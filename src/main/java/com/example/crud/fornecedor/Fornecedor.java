@@ -1,27 +1,22 @@
-package com.example.crud.cliente.entity;
+package com.example.crud.fornecedor;
 
 import com.example.crud.parceiro.entity.Parceiro;
-import com.example.crud.shared.BaseEntity;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-import java.math.BigDecimal;
-
 @Getter
 @Setter
 @Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "clientes")
-public class Cliente extends BaseEntity {
+@Table(name = "fornecedores")
+public class Fornecedor {
 
     @OneToOne
     @JoinColumn(name = "parceiro_id", nullable = false, unique = true)
     private Parceiro parceiro;
-
-    private BigDecimal saldo;
 
 }
