@@ -1,4 +1,4 @@
-package com.example.crud.parceiro;
+package com.example.crud.parceiro.mapper;
 
 import com.example.crud.parceiro.dto.ParceiroRequestDTO;
 import com.example.crud.parceiro.dto.ParceiroResponseDTO;

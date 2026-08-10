@@ -1,7 +1,9 @@
 package com.example.crud.parceiro;
 
 import com.example.crud.parceiro.dto.ParceiroRequestDTO;
+import com.example.crud.parceiro.dto.ParceiroResponseDTO;
 import com.example.crud.parceiro.service.ParceiroService;
+import com.example.crud.shared.ApiResponseDTO;
 import com.example.crud.shared.MessageResponseDTO;
 import io.swagger.v3.oas.annotations.Operation;
 import jakarta.validation.Valid;
@@ -23,7 +25,7 @@ public class ParceiroController {
             description = "Registra um parceiro no sistema."
     )
     @PostMapping
-    public ResponseEntity<MessageResponseDTO> cadastroParceiro(@RequestBody @Valid ParceiroRequestDTO parceiroRequestDTO) {
+    public ResponseEntity<ApiResponseDTO<ParceiroResponseDTO>> cadastroParceiro(@RequestBody @Valid ParceiroRequestDTO parceiroRequestDTO) {
         return service.cadastroParceiro(parceiroRequestDTO);
     }
 
